@@ -21,44 +21,73 @@ struct MainView: View {
     }
     
     private func performSearch() {
-        openAI.sendCompletion(with: chatText,
-                              maxTokens: 500) { result in
-            switch result {
-            case .success(let success):
-                if let answer = success.choices?.first?.text.trimmingCharacters(in: .whitespacesAndNewlines) {
-                    
-                    let query = Query(question: chatText, answer: answer)
-                    
-                    DispatchQueue.main.async {
-                        model.queries.append(query)
-                    }
-                    
-                    do {
-                        try model.saveQuery(query)
-                    } catch {
-                        print(error.localizedDescription)
-                    }
-                    
-                    chatText = ""
-                }
-                
-            case .failure(let failure):
-                print(failure)
-            }
+        
+        let query = Query(question: chatText, answer: "MockAnswer")
+        
+        DispatchQueue.main.async {
+            model.queries.append(query)
         }
+        
+        do {
+            try model.saveQuery(query)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        //        openAI.sendCompletion(with: chatText,
+        //                              maxTokens: 500) { result in
+        //            switch result {
+        //            case .success(let success):
+        //                if let answer = success.choices?.first?.text.trimmingCharacters(in: .whitespacesAndNewlines) {
+        //
+        //                    let query = Query(question: chatText, answer: answer)
+        //
+        //                    DispatchQueue.main.async {
+        //                        model.queries.append(query)
+        //                    }
+        //
+        //                    do {
+        //                        try model.saveQuery(query)
+        //                    } catch {
+        //                        print(error.localizedDescription)
+        //                    }
+        //
+        //                    chatText = ""
+        //                }
+        //
+        //            case .failure(let failure):
+        //                print(failure)
+        //            }
+        //        }
     }
     
     var body: some View {
         VStack {
-            List(model.queries) { query in
-                VStack(alignment: .leading) {
-                    Text(query.question)
-                        .fontWeight(.semibold)
-                    Text(query.answer)
-                }.frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom, 10)
-                    .listRowSeparator(.hidden)
-            }.listStyle(.plain)
+            ScrollView {
+                ScrollViewReader { proxy in
+                    ForEach(model.queries) { query in
+                        VStack(alignment: .leading) {
+                            Text(query.question)
+                                .fontWeight(.semibold)
+                            Text(query.answer)
+                        }.frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.bottom, 10)
+                            .id(query.id)
+                            .listRowSeparator(.hidden)
+                    }.listStyle(.plain)
+                        .onChange(of: model.queries) { query in
+                            guard !model.queries.isEmpty else {
+                                return
+                            }
+                            
+                            if let lastQuery = model.queries.last {
+                                withAnimation {
+                                    proxy.scrollTo(lastQuery.id)
+                                }
+                            }
+                        }
+                }
+            }
             
             Spacer()
             HStack {
