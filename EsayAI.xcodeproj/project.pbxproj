@@ -15,12 +15,20 @@
 		05B378D129DC4DC500E00345 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378D029DC4DC500E00345 /* ContentView.swift */; };
 		05B378D329DC4DC600E00345 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B378D229DC4DC600E00345 /* Assets.xcassets */; };
 		05B378D629DC4DC600E00345 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B378D529DC4DC600E00345 /* Preview Assets.xcassets */; };
-		05B378E029DC4E9C00E00345 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 05B378DF29DC4E9C00E00345 /* OpenAISwift */; };
-		05B378E329DC4EDD00E00345 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 05B378E229DC4EDD00E00345 /* OpenAISwift */; };
 		05B378E829DC50DA00E00345 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378E729DC50DA00E00345 /* MainView.swift */; };
 		05B378E929DC50DA00E00345 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378E729DC50DA00E00345 /* MainView.swift */; };
 		05B378EB29DC58AF00E00345 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378EA29DC58AF00E00345 /* String + Extensions.swift */; };
 		05B378EC29DC58AF00E00345 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378EA29DC58AF00E00345 /* String + Extensions.swift */; };
+		05B378F029DC626000E00345 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378EF29DC626000E00345 /* CoreDataManager.swift */; };
+		05B378F129DC626000E00345 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378EF29DC626000E00345 /* CoreDataManager.swift */; };
+		05B378F429DC637100E00345 /* HistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05B378F229DC637100E00345 /* HistoryModel.xcdatamodeld */; };
+		05B378F529DC637100E00345 /* HistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05B378F229DC637100E00345 /* HistoryModel.xcdatamodeld */; };
+		05B378F829DC69B700E00345 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378F729DC69B700E00345 /* Query.swift */; };
+		05B378F929DC69B700E00345 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378F729DC69B700E00345 /* Query.swift */; };
+		05B378FB29DC6AA800E00345 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378FA29DC6AA800E00345 /* Model.swift */; };
+		05B378FC29DC6AA800E00345 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378FA29DC6AA800E00345 /* Model.swift */; };
+		05B3790329DC6FD100E00345 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 05B3790229DC6FD100E00345 /* OpenAISwift */; };
+		05B3790529DC6FDA00E00345 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 05B3790429DC6FDA00E00345 /* OpenAISwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +45,11 @@
 		05B378D729DC4DC600E00345 /* macOS_EsayAI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS_EsayAI.entitlements; sourceTree = "<group>"; };
 		05B378E729DC50DA00E00345 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		05B378EA29DC58AF00E00345 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
+		05B378EF29DC626000E00345 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		05B378F329DC637100E00345 /* HistoryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HistoryModel.xcdatamodel; sourceTree = "<group>"; };
+		05B378F729DC69B700E00345 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		05B378FA29DC6AA800E00345 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		05B378FD29DC6DAC00E00345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B378E029DC4E9C00E00345 /* OpenAISwift in Frameworks */,
+				05B3790329DC6FD100E00345 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B378E329DC4EDD00E00345 /* OpenAISwift in Frameworks */,
+				05B3790529DC6FDA00E00345 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +95,7 @@
 		05B378BB29DC4DA900E00345 /* iOS-EsayAI */ = {
 			isa = PBXGroup;
 			children = (
+				05B378FD29DC6DAC00E00345 /* Info.plist */,
 				05B378BC29DC4DA900E00345 /* iOS_EsayAIApp.swift */,
 				05B378BE29DC4DA900E00345 /* ContentView.swift */,
 				05B378C029DC4DAB00E00345 /* Assets.xcassets */,
@@ -122,7 +136,9 @@
 			isa = PBXGroup;
 			children = (
 				05B378E729DC50DA00E00345 /* MainView.swift */,
+				05B378F629DC69A600E00345 /* Models */,
 				05B378ED29DC58B400E00345 /* Extensions */,
+				05B378EE29DC624B00E00345 /* Managers */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -142,6 +158,24 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		05B378EE29DC624B00E00345 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				05B378EF29DC626000E00345 /* CoreDataManager.swift */,
+				05B378F229DC637100E00345 /* HistoryModel.xcdatamodeld */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		05B378F629DC69A600E00345 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				05B378F729DC69B700E00345 /* Query.swift */,
+				05B378FA29DC6AA800E00345 /* Model.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,7 +193,7 @@
 			);
 			name = "iOS-EsayAI";
 			packageProductDependencies = (
-				05B378DF29DC4E9C00E00345 /* OpenAISwift */,
+				05B3790229DC6FD100E00345 /* OpenAISwift */,
 			);
 			productName = "iOS-EsayAI";
 			productReference = 05B378B929DC4DA900E00345 /* iOS-EsayAI.app */;
@@ -179,7 +213,7 @@
 			);
 			name = "macOS-EsayAI";
 			packageProductDependencies = (
-				05B378E229DC4EDD00E00345 /* OpenAISwift */,
+				05B3790429DC6FDA00E00345 /* OpenAISwift */,
 			);
 			productName = "macOS-EsayAI";
 			productReference = 05B378CC29DC4DC500E00345 /* macOS-EsayAI.app */;
@@ -213,7 +247,7 @@
 			);
 			mainGroup = 05B378AE29DC4D4800E00345;
 			packageReferences = (
-				05B378DE29DC4E9C00E00345 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				05B3790129DC6FD100E00345 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
 			);
 			productRefGroup = 05B378BA29DC4DA900E00345 /* Products */;
 			projectDirPath = "";
@@ -252,9 +286,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				05B378BF29DC4DA900E00345 /* ContentView.swift in Sources */,
+				05B378F829DC69B700E00345 /* Query.swift in Sources */,
 				05B378E829DC50DA00E00345 /* MainView.swift in Sources */,
 				05B378EB29DC58AF00E00345 /* String + Extensions.swift in Sources */,
+				05B378F029DC626000E00345 /* CoreDataManager.swift in Sources */,
+				05B378F429DC637100E00345 /* HistoryModel.xcdatamodeld in Sources */,
 				05B378BD29DC4DA900E00345 /* iOS_EsayAIApp.swift in Sources */,
+				05B378FB29DC6AA800E00345 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,9 +301,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				05B378D129DC4DC500E00345 /* ContentView.swift in Sources */,
+				05B378F929DC69B700E00345 /* Query.swift in Sources */,
 				05B378E929DC50DA00E00345 /* MainView.swift in Sources */,
 				05B378EC29DC58AF00E00345 /* String + Extensions.swift in Sources */,
+				05B378F129DC626000E00345 /* CoreDataManager.swift in Sources */,
+				05B378F529DC637100E00345 /* HistoryModel.xcdatamodeld in Sources */,
 				05B378CF29DC4DC500E00345 /* macOS_EsayAIApp.swift in Sources */,
+				05B378FC29DC6AA800E00345 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +384,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "iOS-EsayAI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -419,7 +461,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "iOS-EsayAI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -632,7 +674,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		05B378DE29DC4E9C00E00345 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+		05B3790129DC6FD100E00345 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
 			requirement = {
@@ -643,17 +685,30 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		05B378DF29DC4E9C00E00345 /* OpenAISwift */ = {
+		05B3790229DC6FD100E00345 /* OpenAISwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 05B378DE29DC4E9C00E00345 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			package = 05B3790129DC6FD100E00345 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
 			productName = OpenAISwift;
 		};
-		05B378E229DC4EDD00E00345 /* OpenAISwift */ = {
+		05B3790429DC6FDA00E00345 /* OpenAISwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 05B378DE29DC4E9C00E00345 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			package = 05B3790129DC6FD100E00345 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
 			productName = OpenAISwift;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		05B378F229DC637100E00345 /* HistoryModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				05B378F329DC637100E00345 /* HistoryModel.xcdatamodel */,
+			);
+			currentVersion = 05B378F329DC637100E00345 /* HistoryModel.xcdatamodel */;
+			path = HistoryModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 05B378AF29DC4D4800E00345 /* Project object */;
 }
