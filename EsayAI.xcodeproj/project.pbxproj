@@ -29,6 +29,8 @@
 		05B378FC29DC6AA800E00345 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378FA29DC6AA800E00345 /* Model.swift */; };
 		05B3790329DC6FD100E00345 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 05B3790229DC6FD100E00345 /* OpenAISwift */; };
 		05B3790529DC6FDA00E00345 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 05B3790429DC6FDA00E00345 /* OpenAISwift */; };
+		05B3790729DC76DE00E00345 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B3790629DC76DE00E00345 /* HistoryView.swift */; };
+		05B3790829DC76DE00E00345 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B3790629DC76DE00E00345 /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,7 @@
 		05B378F729DC69B700E00345 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		05B378FA29DC6AA800E00345 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		05B378FD29DC6DAC00E00345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		05B3790629DC76DE00E00345 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				05B378E729DC50DA00E00345 /* MainView.swift */,
+				05B3790629DC76DE00E00345 /* HistoryView.swift */,
 				05B378F629DC69A600E00345 /* Models */,
 				05B378ED29DC58B400E00345 /* Extensions */,
 				05B378EE29DC624B00E00345 /* Managers */,
@@ -292,6 +296,7 @@
 				05B378F029DC626000E00345 /* CoreDataManager.swift in Sources */,
 				05B378F429DC637100E00345 /* HistoryModel.xcdatamodeld in Sources */,
 				05B378BD29DC4DA900E00345 /* iOS_EsayAIApp.swift in Sources */,
+				05B3790729DC76DE00E00345 /* HistoryView.swift in Sources */,
 				05B378FB29DC6AA800E00345 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +312,7 @@
 				05B378F129DC626000E00345 /* CoreDataManager.swift in Sources */,
 				05B378F529DC637100E00345 /* HistoryModel.xcdatamodeld in Sources */,
 				05B378CF29DC4DC500E00345 /* macOS_EsayAIApp.swift in Sources */,
+				05B3790829DC76DE00E00345 /* HistoryView.swift in Sources */,
 				05B378FC29DC6AA800E00345 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
