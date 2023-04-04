@@ -17,6 +17,10 @@
 		05B378D629DC4DC600E00345 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B378D529DC4DC600E00345 /* Preview Assets.xcassets */; };
 		05B378E029DC4E9C00E00345 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 05B378DF29DC4E9C00E00345 /* OpenAISwift */; };
 		05B378E329DC4EDD00E00345 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 05B378E229DC4EDD00E00345 /* OpenAISwift */; };
+		05B378E829DC50DA00E00345 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378E729DC50DA00E00345 /* MainView.swift */; };
+		05B378E929DC50DA00E00345 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378E729DC50DA00E00345 /* MainView.swift */; };
+		05B378EB29DC58AF00E00345 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378EA29DC58AF00E00345 /* String + Extensions.swift */; };
+		05B378EC29DC58AF00E00345 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378EA29DC58AF00E00345 /* String + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,8 @@
 		05B378D229DC4DC600E00345 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05B378D529DC4DC600E00345 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		05B378D729DC4DC600E00345 /* macOS_EsayAI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS_EsayAI.entitlements; sourceTree = "<group>"; };
+		05B378E729DC50DA00E00345 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		05B378EA29DC58AF00E00345 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,8 @@
 		05B378DD29DC4E1300E00345 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				05B378E729DC50DA00E00345 /* MainView.swift */,
+				05B378ED29DC58B400E00345 /* Extensions */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -124,6 +132,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05B378ED29DC58B400E00345 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				05B378EA29DC58AF00E00345 /* String + Extensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +252,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				05B378BF29DC4DA900E00345 /* ContentView.swift in Sources */,
+				05B378E829DC50DA00E00345 /* MainView.swift in Sources */,
+				05B378EB29DC58AF00E00345 /* String + Extensions.swift in Sources */,
 				05B378BD29DC4DA900E00345 /* iOS_EsayAIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				05B378D129DC4DC500E00345 /* ContentView.swift in Sources */,
+				05B378E929DC50DA00E00345 /* MainView.swift in Sources */,
+				05B378EC29DC58AF00E00345 /* String + Extensions.swift in Sources */,
 				05B378CF29DC4DC500E00345 /* macOS_EsayAIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
