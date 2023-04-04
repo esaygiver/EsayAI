@@ -28,7 +28,7 @@ struct MainView: View {
                 if let answer = success.choices?.first?.text.trimmingCharacters(in: .whitespacesAndNewlines) {
                     
                     let query = Query(question: chatText, answer: answer)
-    
+                    
                     DispatchQueue.main.async {
                         model.queries.append(query)
                     }
@@ -51,12 +51,15 @@ struct MainView: View {
     var body: some View {
         VStack {
             List(model.queries) { query in
-                VStack {
+                VStack(alignment: .leading) {
                     Text(query.question)
                         .fontWeight(.semibold)
                     Text(query.answer)
-                }
-            }
+                }.frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.bottom, 10)
+                    .listRowSeparator(.hidden)
+            }.listStyle(.plain)
+            
             Spacer()
             HStack {
                 TextField("Ask ChatGPT...", text: $chatText)
@@ -74,9 +77,11 @@ struct MainView: View {
                 .buttonStyle(.borderless)
                 .tint(.blue)
                 .disabled(!isValidText)
-
             }
         }.padding()
+            .onChange(of: model.selectedQuery) { query in
+                model.queries.append(query)
+            }
     }
 }
 

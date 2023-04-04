@@ -10,6 +10,7 @@ import Foundation
 class Model: ObservableObject {
     
     @Published var queries = [Query]()
+    @Published var selectedQuery = Query(question: "", answer: "")
     
     func saveQuery(_ query: Query) throws {
         let viewContext = CoreDataManager.shared.persistentContainer.viewContext

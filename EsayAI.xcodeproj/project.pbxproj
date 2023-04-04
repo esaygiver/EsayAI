@@ -140,6 +140,7 @@
 			children = (
 				05B378E729DC50DA00E00345 /* MainView.swift */,
 				05B3790629DC76DE00E00345 /* HistoryView.swift */,
+				05B378FA29DC6AA800E00345 /* Model.swift */,
 				05B378F629DC69A600E00345 /* Models */,
 				05B378ED29DC58B400E00345 /* Extensions */,
 				05B378EE29DC624B00E00345 /* Managers */,
@@ -175,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				05B378F729DC69B700E00345 /* Query.swift */,
-				05B378FA29DC6AA800E00345 /* Model.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
