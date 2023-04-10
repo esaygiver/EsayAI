@@ -14,7 +14,10 @@ struct MainView: View {
     @State private var answers = [String]()
     @EnvironmentObject private var model: Model
     
+    //TODO: - Bind to state
     private let openAI = OpenAISwift(authToken: "MockAPIKey")
+    
+    @State private var isSearching = false
     
     private var isValidText: Bool {
         !chatText.isEmptyOrWhiteSpace
@@ -40,9 +43,11 @@ struct MainView: View {
                     }
                     
                     chatText = ""
+                    isSearching = false
                 }
                 
             case .failure(let failure):
+                isSearching = false
                 print(failure)
             }
         }
@@ -88,6 +93,7 @@ struct MainView: View {
                     .autocorrectionDisabled()
                 
                 Button {
+                    isSearching = true
                     performSearch()
                 } label: {
                     Image(systemName: "paperplane.circle.fill")
@@ -101,6 +107,11 @@ struct MainView: View {
         }.padding()
             .onChange(of: model.selectedQuery) { query in
                 model.queries.append(query)
+            }
+            .overlay(alignment: .center) {
+                if isSearching {
+                    ProgressView("Searching...")
+                }
             }
     }
 }

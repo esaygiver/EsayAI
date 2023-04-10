@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		059B95FF29E44C6800429DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059B95FE29E44C6800429DA5 /* AppDelegate.swift */; };
 		05B378BD29DC4DA900E00345 /* iOS_EsayAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378BC29DC4DA900E00345 /* iOS_EsayAIApp.swift */; };
 		05B378BF29DC4DA900E00345 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B378BE29DC4DA900E00345 /* ContentView.swift */; };
 		05B378C129DC4DAB00E00345 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B378C029DC4DAB00E00345 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		059B95FE29E44C6800429DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05B378B929DC4DA900E00345 /* iOS-EsayAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-EsayAI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B378BC29DC4DA900E00345 /* iOS_EsayAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_EsayAIApp.swift; sourceTree = "<group>"; };
 		05B378BE29DC4DA900E00345 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				05B378CE29DC4DC500E00345 /* macOS_EsayAIApp.swift */,
 				05B378D029DC4DC500E00345 /* ContentView.swift */,
+				059B95FE29E44C6800429DA5 /* AppDelegate.swift */,
 				05B378D229DC4DC600E00345 /* Assets.xcassets */,
 				05B378D729DC4DC600E00345 /* macOS_EsayAI.entitlements */,
 				05B378D429DC4DC600E00345 /* Preview Content */,
@@ -313,6 +316,7 @@
 				05B378F529DC637100E00345 /* HistoryModel.xcdatamodeld in Sources */,
 				05B378CF29DC4DC500E00345 /* macOS_EsayAIApp.swift in Sources */,
 				05B3790829DC76DE00E00345 /* HistoryView.swift in Sources */,
+				059B95FF29E44C6800429DA5 /* AppDelegate.swift in Sources */,
 				05B378FC29DC6AA800E00345 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +557,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -628,6 +633,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
