@@ -21,44 +21,31 @@ struct MainView: View {
     }
     
     private func performSearch() {
-        
-        let query = Query(question: chatText, answer: "MockAnswer")
-        
-        DispatchQueue.main.async {
-            model.queries.append(query)
+        openAI.sendCompletion(with: chatText,
+                              maxTokens: 500) { result in
+            switch result {
+            case .success(let success):
+                if let answer = success.choices?.first?.text.trimmingCharacters(in: .whitespacesAndNewlines) {
+                    
+                    let query = Query(question: chatText, answer: answer)
+                    
+                    DispatchQueue.main.async {
+                        model.queries.append(query)
+                    }
+                    
+                    do {
+                        try model.saveQuery(query)
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                    
+                    chatText = ""
+                }
+                
+            case .failure(let failure):
+                print(failure)
+            }
         }
-        
-        do {
-            try model.saveQuery(query)
-        } catch {
-            print(error.localizedDescription)
-        }
-        
-        //        openAI.sendCompletion(with: chatText,
-        //                              maxTokens: 500) { result in
-        //            switch result {
-        //            case .success(let success):
-        //                if let answer = success.choices?.first?.text.trimmingCharacters(in: .whitespacesAndNewlines) {
-        //
-        //                    let query = Query(question: chatText, answer: answer)
-        //
-        //                    DispatchQueue.main.async {
-        //                        model.queries.append(query)
-        //                    }
-        //
-        //                    do {
-        //                        try model.saveQuery(query)
-        //                    } catch {
-        //                        print(error.localizedDescription)
-        //                    }
-        //
-        //                    chatText = ""
-        //                }
-        //
-        //            case .failure(let failure):
-        //                print(failure)
-        //            }
-        //        }
     }
     
     var body: some View {
@@ -66,14 +53,18 @@ struct MainView: View {
             ScrollView {
                 ScrollViewReader { proxy in
                     ForEach(model.queries) { query in
-                        VStack(alignment: .leading) {
-                            Text(query.question)
-                                .fontWeight(.semibold)
-                            Text(query.answer)
-                        }.frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.bottom, 10)
-                            .id(query.id)
-                            .listRowSeparator(.hidden)
+                        if #available(macOS 13.0, *) {
+                            VStack(alignment: .leading) {
+                                Text(query.question)
+                                    .fontWeight(.semibold)
+                                Text(query.answer)
+                            }.frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.bottom, 10)
+                                .id(query.id)
+                                .listRowSeparator(.hidden)
+                        } else {
+                            // Fallback on earlier versions
+                        }
                     }.listStyle(.plain)
                         .onChange(of: model.queries) { query in
                             guard !model.queries.isEmpty else {
@@ -88,7 +79,7 @@ struct MainView: View {
                         }
                 }
             }
-            
+                
             Spacer()
             HStack {
                 TextField("Ask ChatGPT...", text: $chatText)

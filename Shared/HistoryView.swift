@@ -25,7 +25,9 @@ struct HistoryView: View {
                        let _answer = historyItem.answer {
                         model.selectedQuery = Query(question: _question,
                                                     answer: _answer)
+                        #if os(iOS)
                         dismiss()
+                        #endif
                     }
                 }
         }
